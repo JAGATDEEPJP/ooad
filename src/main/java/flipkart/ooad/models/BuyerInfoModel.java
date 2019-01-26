@@ -8,6 +8,20 @@ public class BuyerInfoModel {
 	private String name;
 	private String password;
 	private LocalDate date;
+	public BuyerInfoModel()
+	{
+		
+	}
+	
+	public BuyerInfoModel(String email, String mobileNum, String name, String password, LocalDate date) {
+		super();
+		this.email = email;
+		this.mobileNum = mobileNum;
+		this.name = name;
+		this.password = password;
+		this.date = date;
+	}
+
 	public String getEmail() {
 		return email;
 	}

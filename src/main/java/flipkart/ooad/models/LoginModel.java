@@ -3,6 +3,17 @@ package flipkart.ooad.models;
 public class LoginModel {
 	private String mobileNum;
 	private String password;
+	public LoginModel()
+	{
+		
+	}
+	
+	public LoginModel(String mobileNum, String password) {
+		super();
+		this.mobileNum = mobileNum;
+		this.password = password;
+	}
+
 	public String getMobileNum() {
 		return mobileNum;
 	}
