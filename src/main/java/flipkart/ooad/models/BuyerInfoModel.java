@@ -8,8 +8,6 @@ public class BuyerInfoModel {
 	private String name;
 	private String password;
 	private LocalDate date;
-	public BuyerInfoModel() {
-	}
 	public String getEmail() {
 		return email;
 	}
