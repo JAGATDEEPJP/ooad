@@ -2,8 +2,12 @@ package flipkart.ooad.models;
 
 public class ItemInfo {
 
-	private int item_id,cat_id,subcat_id;
-	private String desc,name,img_url;
+	private int item_id;
+	private int cat_id;
+	private int subcat_id;
+	private String desc;
+	private String name;
+	private String img_url;
 	public ItemInfo()
 	{
 		
