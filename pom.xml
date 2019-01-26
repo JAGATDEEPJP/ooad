@@ -55,14 +55,14 @@
     		<version>8.0.12</version>
 		</dependency>
 		<!-- satyam ne bola tha -->
-		        <dependency>
+		 <dependency>
             <groupId>org.glassfish.jersey.media</groupId>
             <artifactId>jersey-media-json-binding</artifactId>
         </dependency>
                <dependency>
     		<groupId>org.glassfish.jersey.media</groupId>
     		<artifactId>jersey-media-multipart</artifactId>
-    		<version>2.27</version> <!-- Make sure the Jersey version matches
+    		<version>2.16</version> <!-- Make sure the Jersey version matches
                                  the one you are currently using -->
 		</dependency>
     </dependencies>
