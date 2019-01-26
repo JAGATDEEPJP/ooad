@@ -2,22 +2,43 @@ package flipkart.ooad.models;
 
 public class ItemInfo {
 
-	private int item_id,cat_id,subcat_id;
-	private String desc,name,img_url;
+	private int item_id;
+	private int cat_id;
+	private int subcat_id;
+	private int seller_id;
+	private int price;
+	private String desc;
+	private String name;
+	private String img_url;
 	public ItemInfo()
 	{
 		
 	}
-	public ItemInfo(int item_id, int cat_id, int subcat_id, String desc, String name, String img_url) {
+
+	public ItemInfo(int item_id, int cat_id, int subcat_id, int seller_id, int price, String desc, String name,
+			String img_url) {
 		super();
 		this.item_id = item_id;
 		this.cat_id = cat_id;
 		this.subcat_id = subcat_id;
+		this.seller_id = seller_id;
+		this.price = price;
 		this.desc = desc;
 		this.name = name;
 		this.img_url = img_url;
 	}
-
+	public int getSeller_id() {
+		return seller_id;
+	}
+	public void setSeller_id(int seller_id) {
+		this.seller_id = seller_id;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
 	public int getItem_id() {
 		return item_id;
 	}

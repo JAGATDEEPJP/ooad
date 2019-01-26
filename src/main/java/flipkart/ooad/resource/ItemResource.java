@@ -11,7 +11,7 @@ import flipkart.ooad.models.ItemInfo;
 public class ItemResource {
 
 	@GET
-	@Path("images")
+	@Path("itemImages")
 	public List<ItemInfo> getImage()
 	{
 		ArrayList<ItemInfo> a= new ArrayList<ItemInfo>();
