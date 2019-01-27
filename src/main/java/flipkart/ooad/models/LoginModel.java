@@ -8,6 +8,11 @@ public class LoginModel {
 		
 	}
 	
+	@Override
+	public String toString() {
+		return "LoginModel [mobileNum=" + mobileNum + ", password=" + password + "]";
+	}
+
 	public LoginModel(String mobileNum, String password) {
 		super();
 		this.mobileNum = mobileNum;
