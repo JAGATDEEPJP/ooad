@@ -3,6 +3,7 @@ package flipkart.ooad.business;
 import flipkart.ooad.database.BuyerDatabase;
 import flipkart.ooad.models.BuyerInfoModel;
 import flipkart.ooad.models.LoginModel;
+import flipkart.ooad.models.SignUpModel;
 
 public class BuyerService {
 	private BuyerDatabase buyerDatabase;
@@ -16,8 +17,8 @@ public class BuyerService {
 			return null;
 		}
 	}
-	public Boolean signUp(LoginModel loginObj) {
-			if(buyerDatabase.signUp(loginObj)==1) {
+	public Boolean signUp(SignUpModel signUpObj) {
+			if(buyerDatabase.signUp(signUpObj)==1) {
 				return true;
 			}
 		return false;

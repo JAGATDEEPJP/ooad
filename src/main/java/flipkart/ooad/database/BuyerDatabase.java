@@ -8,6 +8,7 @@ import java.time.LocalDate;
 
 import flipkart.ooad.models.BuyerInfoModel;
 import flipkart.ooad.models.LoginModel;
+import flipkart.ooad.models.SignUpModel;
 
 public class BuyerDatabase {
 	private Connection connection;
@@ -80,14 +81,17 @@ public class BuyerDatabase {
 		}
 		return result;
 	}
-	public Integer signUp(LoginModel loginObj) {
+	public Integer signUp(SignUpModel signUpObj) {
 		Integer result=0;
 		try {
-			String mobileNum=loginObj.getMobileNum();
-			String pwd=loginObj.getPassword();
-			PreparedStatement stmt=connection.prepareStatement("INSERT INTO BUYERINFO(MOBILE_NUM,PASSWORD) VALUES(?,?);");
+			String mobileNum=signUpObj.getMobileNum();
+			String pwd=signUpObj.getPassword();
+			LocalDate localDate=signUpObj.getLocalDate();
+			java.sql.Date date=java.sql.Date.valueOf(localDate);
+			PreparedStatement stmt=connection.prepareStatement("INSERT INTO BUYERINFO(MOBILE_NUM,PASSWORD,DOB) VALUES(?,?,?);");
 			stmt.setString(1, mobileNum);
 			stmt.setString(2, pwd);
+			stmt.setDate(3, date);
 			result=stmt.executeUpdate();
 		}catch(Exception e) {
 			System.out.println(e);

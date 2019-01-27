@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import flipkart.ooad.business.BuyerService;
 import flipkart.ooad.models.BuyerInfoModel;
 import flipkart.ooad.models.LoginModel;
+import flipkart.ooad.models.SignUpModel;
 
 @Path("buyer")
 public class BuyerResource {
@@ -24,7 +25,7 @@ public class BuyerResource {
 	@Path("signup")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
-	public Boolean signUp(LoginModel loginObj) {
-		return buyerService.signUp(loginObj); 
+	public Boolean signUp(SignUpModel signUpObj) {
+		return buyerService.signUp(signUpObj); 
 	}
 }
