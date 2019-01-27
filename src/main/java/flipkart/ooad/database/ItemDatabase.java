@@ -26,7 +26,6 @@ public class ItemDatabase {
 	
 	public List<ItemInfo> getItems()
 	{
-		System.out.println("hr");
 		ArrayList<ItemInfo> images=new ArrayList<ItemInfo>();
 		try {
 			PreparedStatement stmt=connection.prepareStatement("SELECT ITEMINFO.ITEM_ID, ITEMINFO.NAME, ITEMINFO.DESCRIPTION, "
