@@ -1,17 +1,17 @@
-//everyone will give descriptions for their queries			-OSHO.
+/*everyone will give descriptions for their queries	*/
 
-//made a category and a subcategory
+/*made a category and a subcategory*/
 INSERT INTO CATEGORY(CAT_ID,DESCRIPTION)VALUES(1,"ELECTRONICS");
 INSERT INTO SUBCATEGORY(SUBCAT_ID,CAT_ID,DESCRIPTION)VALUES(11,1,"MOBILE");
 
-//added an item
+/*added an item*/
 INSERT INTO ITEMINFO(ITEM_ID,NAME,DESCRIPTION,IMG_URL,CAT_ID,SUBCAT_ID)VALUES(1,"IPAD","APPLE","NA",1,11);
 
-//added one seller and one item for that seller
+/*added one seller and one item for that seller*/
 INSERT INTO SELLER(SELLER_ID,MOBILE_NUM,EMAIL,NAME,PASSWORD)VALUES(1,"9654689606","14103022UTKARSH@GMAIL.COM","UTTU","AGRA");
 INSERT INTO ITEM(ITEM_ID,SELLER_ID,PRICE)VALUES(1,1,100);
 
 
-//added another seller and one item for that seller
+/*added another seller and one item for that seller*/
 INSERT INTO SELLER(SELLER_ID,MOBILE_NUM,EMAIL,NAME,PASSWORD)VALUES(2,"9407473483","ravindra.singhpawar11@gmail.com","rciphertext","cipher");
 INSERT INTO ITEM(ITEM_ID,SELLER_ID,PRICE)VALUES(1,2,200);
