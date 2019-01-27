@@ -26,6 +26,7 @@ public class ItemDatabase {
 	
 	public List<ItemInfo> getImage()
 	{
+		System.out.println("hr");
 		ArrayList<ItemInfo> images=new ArrayList<ItemInfo>();
 		try {
 			PreparedStatement stmt=connection.prepareStatement("SELECT ITEMINFO.ITEM_ID, ITEMINFO.NAME, ITEMINFO.DESCRIPTION, ITEMINFO.IMG_URL, ITEMINFO.CAT_ID, ITEMINFO.SUBCAT_ID, ITEM.SELLER_ID, ITEM.PRICE FROM ITEMINFO INNER JOIN ITEM ON ITEMINFO.ITEM_ID = ITEM.ITEM_ID;");
