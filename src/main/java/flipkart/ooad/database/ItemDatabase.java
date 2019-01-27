@@ -28,7 +28,7 @@ public class ItemDatabase {
 	{
 		ArrayList<ItemInfo> images=new ArrayList<ItemInfo>();
 		try {
-			PreparedStatement stmt=connection.prepareStatement("select * from student;");
+			PreparedStatement stmt=connection.prepareStatement("SELECT ITEMINFO.ITEM_ID, ITEMINFO.NAME, ITEMINFO.DESCRIPTION, ITEMINFO.IMG_URL, ITEMINFO.CAT_ID, ITEMINFO.SUBCAT_ID, ITEM.SELLER_ID, ITEM.PRICE FROM ITEMINFO INNER JOIN ITEM ON ITEMINFO.ITEM_ID = ITEM.ITEM_ID;");
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
 				ItemInfo item=new ItemInfo();
@@ -38,8 +38,8 @@ public class ItemDatabase {
 				item.setImg_url(rs.getString(4));
 				item.setCat_id(rs.getInt(5));
 				item.setSubcat_id(rs.getInt(6));
-			//	item.setPrice(7);
-			//	item.setSeller_id(8);				
+				item.setSeller_id(rs.getInt(7));
+				item.setPrice(rs.getInt(8));
 				images.add(item);
 			}
 		}catch(Exception e) {
