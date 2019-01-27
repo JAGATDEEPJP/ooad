@@ -24,12 +24,15 @@ public class ItemDatabase {
 		}
 	}
 	
-	public List<ItemInfo> getImage()
+	public List<ItemInfo> getItems()
 	{
 		System.out.println("hr");
 		ArrayList<ItemInfo> images=new ArrayList<ItemInfo>();
 		try {
-			PreparedStatement stmt=connection.prepareStatement("SELECT ITEMINFO.ITEM_ID, ITEMINFO.NAME, ITEMINFO.DESCRIPTION, ITEMINFO.IMG_URL, ITEMINFO.CAT_ID, ITEMINFO.SUBCAT_ID, ITEM.SELLER_ID, ITEM.PRICE FROM ITEMINFO INNER JOIN ITEM ON ITEMINFO.ITEM_ID = ITEM.ITEM_ID;");
+			PreparedStatement stmt=connection.prepareStatement("SELECT ITEMINFO.ITEM_ID, ITEMINFO.NAME, ITEMINFO.DESCRIPTION, "
+					+ "ITEMINFO.IMG_URL, ITEMINFO.CAT_ID, ITEMINFO.SUBCAT_ID, ITEM.SELLER_ID, ITEM.PRICE FROM ITEMINFO INNER JOIN "
+					+ "ITEM ON ITEMINFO.ITEM_ID = ITEM.ITEM_ID;");
+			
 			ResultSet rs=stmt.executeQuery();
 			while(rs.next()) {
 				ItemInfo item=new ItemInfo();

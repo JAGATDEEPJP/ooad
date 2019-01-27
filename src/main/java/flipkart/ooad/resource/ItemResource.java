@@ -11,15 +11,16 @@ import javax.ws.rs.core.MediaType;
 import flipkart.ooad.business.ItemService;
 import flipkart.ooad.models.ItemInfo;
 @Path("item")
-public class ItemResource {
+public class ItemResource 
+{
 
+	ItemService is = new ItemService();
+	
 	@GET
 	@Path("itemImages")
 	@Produces(MediaType.APPLICATION_JSON)
 	public List<ItemInfo> getImage()
 	{
-		ArrayList<ItemInfo> a= new ArrayList<ItemInfo>();
-		ItemService is = new ItemService();
-		return is.getImage();
+		return is.getItems();
 	}
 }

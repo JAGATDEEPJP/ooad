@@ -7,10 +7,11 @@ import flipkart.ooad.models.ItemInfo;
 
 public class ItemService 
 {
-	public List<ItemInfo> getImage()
+	ItemDatabase id = new ItemDatabase();
+
+	public List<ItemInfo> getItems()
 	{
-		ItemDatabase id = new ItemDatabase();
-		return id.getImage();
+		return id.getItems();
 		//call to getImage of itemDatabase.java
 	}
 }
