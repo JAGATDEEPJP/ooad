@@ -13,6 +13,12 @@ public class BuyerInfoModel {
 		
 	}
 	
+	@Override
+	public String toString() {
+		return "BuyerInfoModel [email=" + email + ", mobileNum=" + mobileNum + ", name=" + name + ", password="
+				+ password + ", date=" + date + "]";
+	}
+
 	public BuyerInfoModel(String email, String mobileNum, String name, String password, LocalDate date) {
 		super();
 		this.email = email;
@@ -54,9 +60,6 @@ public class BuyerInfoModel {
 	}
 	public void setDate(LocalDate date) {
 		this.date = date;
-	}
-	public String toString() {
-		return this.name+" "+this.mobileNum+" "+this.password+" "+this.email;
 	}
 	
 }

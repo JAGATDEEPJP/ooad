@@ -15,6 +15,12 @@ public class ItemInfo {
 		
 	}
 
+	@Override
+	public String toString() {
+		return "ItemInfo [item_id=" + item_id + ", cat_id=" + cat_id + ", subcat_id=" + subcat_id + ", seller_id="
+				+ seller_id + ", price=" + price + ", desc=" + desc + ", name=" + name + ", img_url=" + img_url + "]";
+	}
+
 	public ItemInfo(int item_id, int cat_id, int subcat_id, int seller_id, int price, String desc, String name,
 			String img_url) {
 		super();
