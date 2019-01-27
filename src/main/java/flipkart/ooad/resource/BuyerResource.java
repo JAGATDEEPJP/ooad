@@ -20,4 +20,11 @@ public class BuyerResource {
 	public BuyerInfoModel login(LoginModel loginObj) {
 		return buyerService.validateLogin(loginObj);
 	}
+	@POST
+	@Path("signup")
+	@Consumes(MediaType.APPLICATION_JSON)
+	@Produces(MediaType.TEXT_PLAIN)
+	public Boolean signUp(LoginModel loginObj) {
+		return buyerService.signUp(loginObj); 
+	}
 }

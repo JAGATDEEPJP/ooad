@@ -28,12 +28,15 @@ public class BuyerInfoModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
 	public String getMobileNum() {
-		return getMobileNum();
+		return mobileNum;
 	}
-	public void setMobile_num(String mobile_num) {
-		this.mobileNum = mobile_num;
+
+	public void setMobileNum(String mobileNum) {
+		this.mobileNum = mobileNum;
 	}
+
 	public String getName() {
 		return name;
 	}

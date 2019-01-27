@@ -16,4 +16,10 @@ public class BuyerService {
 			return null;
 		}
 	}
+	public Boolean signUp(LoginModel loginObj) {
+			if(buyerDatabase.signUp(loginObj)==1) {
+				return true;
+			}
+		return false;
+	}
 }

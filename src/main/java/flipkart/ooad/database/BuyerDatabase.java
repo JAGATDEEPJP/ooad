@@ -32,8 +32,6 @@ public class BuyerDatabase {
 			ResultSet resSet=stmt.executeQuery();
 			while(resSet.next()) {
 				String pwd=resSet.getString(1);
-				System.out.println(pwd);
-				System.out.println(loginObj.getPassword());
 				if(pwd.equals(loginObj.getPassword())==true) {
 					return true;
 				}
@@ -53,7 +51,7 @@ public class BuyerDatabase {
 			stmt.setString(1, mobileNum);
 			ResultSet resSet=stmt.executeQuery();
 			while(resSet.next()) {
-				buyer.setMobile_num(resSet.getString(2));
+				buyer.setMobileNum(resSet.getString(2));
 				buyer.setEmail(resSet.getString(3));
 				buyer.setName(resSet.getString(4));
 				buyer.setPassword(resSet.getString(5));
@@ -65,5 +63,35 @@ public class BuyerDatabase {
 			System.out.println(e);
 		}
 		return buyer;
+	}
+	public Boolean validateUsername(LoginModel loginObj) {
+		Boolean result=false;
+		try {
+			String uname=loginObj.getMobileNum();
+			PreparedStatement stmt=connection.prepareStatement("SELECT * FROM BUYERINFO WHERE "
+					+ "MOBILE_NUM=?;");
+			stmt.setString(1, uname);
+			ResultSet resSet=stmt.executeQuery();
+			while(resSet.next()) {
+				result=true;
+			}
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		return result;
+	}
+	public Integer signUp(LoginModel loginObj) {
+		Integer result=0;
+		try {
+			String mobileNum=loginObj.getMobileNum();
+			String pwd=loginObj.getPassword();
+			PreparedStatement stmt=connection.prepareStatement("INSERT INTO BUYERINFO(MOBILE_NUM,PASSWORD) VALUES(?,?);");
+			stmt.setString(1, mobileNum);
+			stmt.setString(2, pwd);
+			result=stmt.executeUpdate();
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+		return result;
 	}
 }
