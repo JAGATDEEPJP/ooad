@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.List;
 
 import flipkart.ooad.models.ItemInfo;
 
@@ -23,7 +24,7 @@ public class ItemDatabase {
 		}
 	}
 	
-	private ArrayList<ItemInfo> getImage()
+	public List<ItemInfo> getImage()
 	{
 		ArrayList<ItemInfo> images=new ArrayList<ItemInfo>();
 		try {
@@ -44,7 +45,6 @@ public class ItemDatabase {
 		}catch(Exception e) {
 			System.out.println(e);
 		}
-//		Collections.sort(students, new StudentGradeComparator());
 		return images;
 	}
 
