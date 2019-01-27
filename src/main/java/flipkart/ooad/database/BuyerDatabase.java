@@ -32,6 +32,8 @@ public class BuyerDatabase {
 			ResultSet resSet=stmt.executeQuery();
 			while(resSet.next()) {
 				String pwd=resSet.getString(1);
+				System.out.println(pwd);
+				System.out.println(loginObj.getPassword());
 				if(pwd.equals(loginObj.getPassword())==true) {
 					return true;
 				}

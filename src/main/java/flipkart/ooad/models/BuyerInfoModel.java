@@ -52,5 +52,8 @@ public class BuyerInfoModel {
 	public void setDate(LocalDate date) {
 		this.date = date;
 	}
+	public String toString() {
+		return this.name+" "+this.mobileNum+" "+this.password+" "+this.email;
+	}
 	
 }

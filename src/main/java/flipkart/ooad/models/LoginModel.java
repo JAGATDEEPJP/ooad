@@ -26,4 +26,7 @@ public class LoginModel {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	public String toString() {
+		return this.mobileNum+" "+this.password;
+	}
 }

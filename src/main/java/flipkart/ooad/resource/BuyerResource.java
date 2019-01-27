@@ -18,6 +18,6 @@ public class BuyerResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public BuyerInfoModel login(LoginModel loginObj) {
-		return new BuyerInfoModel();
+		return buyerService.validateLogin(loginObj);
 	}
 }
