@@ -75,7 +75,6 @@ public class BuyerDatabase {
 					+ "MOBILE_NUM=?;");
 			stmt.setString(1, uname);
 			ResultSet resSet=stmt.executeQuery();
-			System.out.println("true");
 			while(resSet.next()) {
 				result=true;
 				

@@ -34,6 +34,9 @@ public class BuyerResource {
 	@Consumes(MediaType.TEXT_PLAIN)
 	@Produces(MediaType.TEXT_PLAIN)
 	public boolean validate(String number) {
-		return buyerService.validate(number); 
+		System.out.println(number);
+		boolean b=buyerService.validate(number); 
+		System.out.println(b);
+		return b;
 	}
 }
