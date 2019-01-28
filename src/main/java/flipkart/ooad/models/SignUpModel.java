@@ -16,7 +16,7 @@ public class SignUpModel {
 	
 	@Override
 	public String toString() {
-		return "LoginModel [mobileNum=" + mobileNum + ", password=" + password +"Date"+DOB+ "]";
+		return "SignUpModel [mobileNum=" + mobileNum + ", password=" + password +"Date"+DOB+ "]";
 	}
 
 	public SignUpModel(String mobileNum, String password,LocalDate localDate) {

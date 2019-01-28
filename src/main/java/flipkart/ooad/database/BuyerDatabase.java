@@ -86,7 +86,6 @@ public class BuyerDatabase {
 	public Integer signUp(SignUpModel signUpObj) {
 		Integer result=0;
 		try {
-			System.out.println(signUpObj);
 			String mobileNum=signUpObj.getMobileNum();
 			String pwd=signUpObj.getPassword();
 			LocalDate localDate=signUpObj.getDOB();
