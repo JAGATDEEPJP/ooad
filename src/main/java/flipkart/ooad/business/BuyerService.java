@@ -17,7 +17,7 @@ public class BuyerService {
 			return null;
 		}
 	}
-	public Boolean signUp(SignUpModel signUpObj) {
+	public boolean signUp(SignUpModel signUpObj) {
 			if(buyerDatabase.signUp(signUpObj)==1) {
 				return true;
 			}
