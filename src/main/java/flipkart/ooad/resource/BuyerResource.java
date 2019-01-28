@@ -29,4 +29,11 @@ public class BuyerResource {
 		//System.out.println(signUpObj);
 		return buyerService.signUp(signUpObj); 
 	}
+	@POST
+	@Path("validate")
+	@Consumes(MediaType.TEXT_PLAIN)
+	@Produces(MediaType.TEXT_PLAIN)
+	public boolean validate(String number) {
+		return buyerService.validate(number); 
+	}
 }

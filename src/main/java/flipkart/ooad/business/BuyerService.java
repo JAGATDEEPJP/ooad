@@ -23,4 +23,8 @@ public class BuyerService {
 			}
 		return false;
 	}
+	public boolean validate(String number) {
+		//System.out.println(signUpObj);
+		return buyerDatabase.validateUsername(number); 
+	}
 }

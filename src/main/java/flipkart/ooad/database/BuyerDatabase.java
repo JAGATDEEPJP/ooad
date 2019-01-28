@@ -65,10 +65,12 @@ public class BuyerDatabase {
 		}
 		return buyer;
 	}
-	public Boolean validateUsername(LoginModel loginObj) {
+	
+	public Boolean validateUsername(String uname) 
+	{
 		Boolean result=false;
 		try {
-			String uname=loginObj.getMobileNum();
+//			String uname=loginObj.getMobileNum();
 			PreparedStatement stmt=connection.prepareStatement("SELECT * FROM BUYERINFO WHERE "
 					+ "MOBILE_NUM=?;");
 			stmt.setString(1, uname);
@@ -83,6 +85,7 @@ public class BuyerDatabase {
 		}
 		return result;
 	}
+	
 	public Integer signUp(SignUpModel signUpObj) {
 		Integer result=0;
 		try {
