@@ -19,10 +19,8 @@ public class BuyerService {
 	}
 	public Boolean signUp(SignUpModel signUpObj) {
 			if(buyerDatabase.signUp(signUpObj)==1) {
-				System.out.println("signup success");
 				return true;
 			}
-			System.out.println("error");
 		return false;
 	}
 }

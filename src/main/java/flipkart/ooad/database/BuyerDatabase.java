@@ -91,16 +91,13 @@ public class BuyerDatabase {
 			String pwd=signUpObj.getPassword();
 			LocalDate localDate=signUpObj.getDOB();
 			java.sql.Date date=java.sql.Date.valueOf(localDate);
-			System.out.println(date);
 			PreparedStatement stmt=connection.prepareStatement("INSERT INTO BUYERINFO(MOBILE_NUM,PASSWORD,DOB) VALUES(?,?,?);");
 			stmt.setString(1, mobileNum);
 			stmt.setString(2, pwd);
 			stmt.setDate(3, date);
 			result=stmt.executeUpdate();
-			System.out.println("true");
 		}catch(Exception e) {
 			System.out.println(e);
-			System.out.println("exception ");
 		}
 		return result;
 	}
