@@ -26,6 +26,8 @@ public class BuyerResource {
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.TEXT_PLAIN)
 	public Boolean signUp(SignUpModel signUpObj) {
-		return buyerService.signUp(signUpObj); 
+		System.out.println(signUpObj);
+		//return buyerService.signUp(signUpObj); 
+		return null;
 	}
 }

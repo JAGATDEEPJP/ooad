@@ -73,8 +73,10 @@ public class BuyerDatabase {
 					+ "MOBILE_NUM=?;");
 			stmt.setString(1, uname);
 			ResultSet resSet=stmt.executeQuery();
+			System.out.println("true");
 			while(resSet.next()) {
 				result=true;
+				
 			}
 		}catch(Exception e) {
 			System.out.println(e);
@@ -84,17 +86,21 @@ public class BuyerDatabase {
 	public Integer signUp(SignUpModel signUpObj) {
 		Integer result=0;
 		try {
+			System.out.println(signUpObj);
 			String mobileNum=signUpObj.getMobileNum();
 			String pwd=signUpObj.getPassword();
-			LocalDate localDate=signUpObj.getLocalDate();
+			LocalDate localDate=signUpObj.getDOB();
 			java.sql.Date date=java.sql.Date.valueOf(localDate);
+			System.out.println(date);
 			PreparedStatement stmt=connection.prepareStatement("INSERT INTO BUYERINFO(MOBILE_NUM,PASSWORD,DOB) VALUES(?,?,?);");
 			stmt.setString(1, mobileNum);
 			stmt.setString(2, pwd);
 			stmt.setDate(3, date);
 			result=stmt.executeUpdate();
+			System.out.println("true");
 		}catch(Exception e) {
 			System.out.println(e);
+			System.out.println("exception ");
 		}
 		return result;
 	}
